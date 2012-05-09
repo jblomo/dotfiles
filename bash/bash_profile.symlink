@@ -1,0 +1,19 @@
+shopt -s histappend
+HISTSIZE=1000
+HISTFILESIZE=2000
+HISTCONTROL=ignoredups
+
+alias vims='vim -S ~/vim-session/`__git_ps1 %s`.vim'
+alias gvims='gvim -S ~/vim-session/`__git_ps1 %s`.vim'
+alias screens='screen -x `__git_ps1 %s`'
+
+alias uvs='mv ~/tmp.vim ~/vim-session/`__git_ps1 %s`.vim'
+
+alias rm='rm -v'
+alias cp='cp -v'
+alias mv='mv -v'
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+
