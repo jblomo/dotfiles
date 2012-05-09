@@ -1,7 +1,6 @@
-colorscheme desert
 set anti
-set lines=999 columns=84
-set guioptions=egmrt
+set columns=110 lines=52
+set guioptions-=m guioptions-=T guioptions-=L guioptions-=r
 
 " Command + t to :CommandT
 if has("gui_macvim")
