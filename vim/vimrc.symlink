@@ -55,11 +55,9 @@ command! Wq wq
 
 set background=dark
 set backspace=2            " allow backspacing over everything in insert mode
-set ch=2                   " command line height
 set nolazyredraw           " turn off lazy redraw
 set noshowcmd              " don't display incomplete commands
 set nostartofline          " don't jump to the start of line when scrolling
-set number                 " line numbers
 set report=0               " tell us about changes
 set ruler                  " show the cursor position all the time
 set shortmess=filtIoOA     " shorten messages
