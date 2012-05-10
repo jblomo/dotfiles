@@ -49,28 +49,34 @@ command! Q  quit
 command! W  write
 command! Wq wq
 
+let Tlist_Process_File_Always = 1
+
 " ----------------------------------------------------------------------------
 "  UI
 " ----------------------------------------------------------------------------
+
+colorscheme zenburn
+
+filetype plugin indent on
+
+let g:zenburn_high_Contrast=1
 
 set background=dark
 set backspace=2            " allow backspacing over everything in insert mode
 set nolazyredraw           " turn off lazy redraw
 set noshowcmd              " don't display incomplete commands
 set nostartofline          " don't jump to the start of line when scrolling
+set previewheight=17
 set report=0               " tell us about changes
+set statusline=%f\ %{fugitive#statusline()}%=%40(%{Tlist_Get_Tagname_By_Line()}%)\ %h%m%r%=%-10.(%l,%c%V%)\ %P
 set ruler                  " show the cursor position all the time
+set scrolloff=2
 set shortmess=filtIoOA     " shorten messages
 set whichwrap+=<,>,h,l,[,] " backspace and cursor keys wrap to
 set wildmenu               " turn on wild menu
 set wildmode=list:longest,full
-set previewheight=17
-set scrolloff=2
-syntax on
-filetype plugin indent on
 
-let g:zenburn_high_Contrast=1
-colorscheme zenburn
+syntax on
 
 " ----------------------------------------------------------------------------
 " Visual Cues
