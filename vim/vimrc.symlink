@@ -8,7 +8,7 @@ endif
 
 inoremap # X<BS>#
 set autoindent             " automatic indent new lines
-set formatoptions+=tnbl
+set formatoptions+=tnblq
 set noexpandtab
 set nofoldenable
 set shiftwidth=2           " ..
