@@ -57,6 +57,8 @@ colorscheme zenburn
 filetype plugin indent on
 
 let g:zenburn_high_Contrast=1
+let g:vimclojure#FuzzyIndent=1
+let g:vimclojure#ParenRainbow=1
 
 set background=dark
 set backspace=2            " allow backspacing over everything in insert mode
