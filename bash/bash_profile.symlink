@@ -9,6 +9,8 @@ alias screens='screen -x `__git_ps1 %s`'
 
 alias uvs='mv ~/tmp.vim ~/vim-session/`__git_ps1 %s`.vim'
 
+alias ..='cd ..'
+alias -- -='cd ..'
 alias rm='rm -v'
 alias cp='cp -v'
 alias mv='mv -v'
@@ -17,4 +19,4 @@ alias l='ls -lAh'
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-export PATH=$PATH:.local/bin:local/bin
+export PATH=$PATH:~/.local/bin:~/local/bin
