@@ -29,17 +29,6 @@ inoremap jj <ESC>
 nnoremap Q gqap
 vnoremap Q gq
 
-" sane movement with wrap turned on
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
-nnoremap <Down> gj
-nnoremap <Up> gk
-vnoremap <Down> gj
-vnoremap <Up> gk
-inoremap <Down> <C-o>gj
-inoremap <Up> <C-o>gk
 nmap <leader>t :TlistToggle<CR>
 
 command! Q  quit
@@ -86,6 +75,7 @@ set mat=5                  " duration to show matching brace (1/10 sec)
 set incsearch              " do incremental searching
 set laststatus=2           " always show the status line
 set ignorecase             " ignore case when searching
+set smartcase              " except when you really mean it
 set nohlsearch             " don't highlight searches
 set visualbell             " shut the fuck up
 set hidden

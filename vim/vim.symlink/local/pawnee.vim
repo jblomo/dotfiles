@@ -3,3 +3,4 @@ if has("gui_running")
 endif
 
 let g:vimclojure#NailgunClient="/home/jblomo/local/bin/ng"
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
