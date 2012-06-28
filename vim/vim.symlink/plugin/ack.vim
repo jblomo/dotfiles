@@ -19,7 +19,7 @@ function! s:Ack(cmd, args)
 
     " If no pattern is provided, search for the word under the cursor
     if empty(a:args)
-        let l:grepargs = expand("<cword>")
+        let l:grepargs = expand("<cword>") . " --type " . &l:filetype
     else
         let l:grepargs = a:args
     end
