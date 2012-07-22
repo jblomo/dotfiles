@@ -1,8 +1,9 @@
-# $scrotwm: scrotwm.conf,v 1.22 2009/11/25 15:13:29 marco Exp $
-#
 # colors for focussed and unfocussed window borders
 color_focus		= red
 color_unfocus		= rgb:88/88/88
+
+# mod key, (windows key is Mod4) (apple key on OSX is Mod2)
+modkey = Mod4
 
 # bar settings
 bar_enabled		= 1
@@ -40,66 +41,23 @@ dialog_ratio		= 0.6
 #region		= screen[1]:1920x1200+0+0
 #region		= screen[1]:1680x1050+1920+0
 
-# mod key, (windows key is Mod4) (apple key on OSX is Mod2)
-modkey = Mod4
-
 # key bindings
-# unbind with: bind[] = <keys>
-#bind[cycle_layout]	= MOD+space
-#bind[stack_reset]	= MOD+Shift+space
-#bind[master_shrink]	= MOD+h
-#bind[master_grow]	= MOD+l
-#bind[master_add]	= MOD+comma
-#bind[master_del]	= MOD+period
-#bind[stack_inc]		= MOD+Shift+comma
-#bind[stack_dec]		= MOD+Shift+period
-#bind[swap_main]		= MOD+Return
-#bind[focus_next]	= MOD+j
-#bind[focus_prev]	= MOD+k
-#bind[swap_next]		= MOD+Shift+j
-#bind[swap_prev]		= MOD+Shift+k
-#bind[spawn_term]	= MOD+Shift+Return
-#bind[menu]		= MOD+p
-#bind[quit]		= MOD+Shift+q
-#bind[restart]		= MOD+q
-#bind[focus_main]	= MOD+m
-#bind[ws_1]		= 1
-#bind[ws_2]		= 2
-#bind[ws_3]		= 3
-#bind[ws_4]		= 4
-#bind[ws_5]		= 5
-#bind[ws_6]		= 6
-#bind[ws_7]		= 7
-#bind[ws_8]		= 8
-#bind[ws_9]		= 9
-#bind[ws_10]		= 0
-#bind[ws_next]		= MOD+Right
-#bind[ws_prev]		= MOD+Left
-bind[screen_next]	= MOD+o
-bind[screen_prev]	= MOD+i
-#bind[mvws_1]		= 1
-#bind[mvws_2]		= 2
-#bind[mvws_3]		= 3
-#bind[mvws_4]		= 4
-#bind[mvws_5]		= 5
-#bind[mvws_6]		= 6
-#bind[mvws_7]		= 7
-#bind[mvws_8]		= 8
-#bind[mvws_9]		= 9
-#bind[mvws_10]		= 0
-#bind[bar_toggle]	= MOD+b
-#bind[focus_next]	= MOD+Tab
-#bind[focus_prev]	= MOD+Shift+Tab
-#bind[wind_kill]	= MOD+Shift+x
-#bind[wind_del]		= MOD+x
-#bind[screenshot_all]	= MOD+s
-#bind[screenshot_wind]	= MOD+Shift+s
-#bind[float_toggle]	= MOD+t
-#bind[version]		= MOD+Shift+v
 bind[lock]		= MOD+F12
 bind[onescreen]		= MOD+F6
 bind[twoscreen]		= MOD+F7
-#bind[initscr]		= MOD+Shift+i
+#XF86Audio Controls
+program[mocp_toggle]    = mocp -G
+bind[mocp_toggle]       = XF86AudioPlay
+program[mocp_prev]      = mocp -r
+bind[mocp_prev]         = XF86AudioPrev
+program[mocp_next]      = mocp -f
+bind[mocp_next]         = XF86AudioNext
+program[mute_volume]    = amixer -q sset Master toggle
+bind[mute_volume]       = XF86AudioMute
+program[raise_volume]   = amixer -q sset Master 3%+ unmute
+bind[raise_volume]      = XF86AudioRaiseVolume
+program[lower_volume]   = amixer -q sset Master 3%- unmute
+bind[lower_volume]      = XF86AudioLowerVolume
 
 # quirks
 # remove with: quirk[class:name] = NONE
@@ -118,7 +76,3 @@ quirk[Gnome-panel:gnome-panel]		= FLOAT + ANYWHERE
 #quirk[Xitk:Xine Window]			= FLOAT + ANYWHERE
 #quirk[xine:xine Video Fullscreen Window] = FULLSCREEN + FLOAT
 #quirk[pcb:pcb]				= FLOAT
-
-# EXAMPLE: define firefox program and bind to key
-# program[firefox]	= firefox http://scrotwm.org/
-# bind[firefox]		= MOD+f
