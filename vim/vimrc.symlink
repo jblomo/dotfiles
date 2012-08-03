@@ -11,9 +11,8 @@ set autoindent             " automatic indent new lines
 set formatoptions+=tnblq
 set noexpandtab
 set nofoldenable
-set shiftwidth=2           " ..
+set shiftwidth=4           " ..
 set smartindent            " be smart about it
-set softtabstop=2          " yep, two
 set tabstop=4
 set textwidth=80           " wrap at 80 chars by default
 set virtualedit=block      " allow virtual edit in visual block ..
