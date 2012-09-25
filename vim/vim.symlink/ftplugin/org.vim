@@ -4,11 +4,11 @@
 "
 " Export functionality from VimOrganizer
 " https://github.com/hsitz/VimOrganizer
-"
 ""/
 
 """""""""""" Settings
 setlocal wrap
+setlocal expandtab
 setlocal showbreak=»\ 
 setlocal comments+=b:+,n:*
 setlocal formatlistpat=^\\s*[0-9+*]\\+[\\]:.)}\\t\ ]\\s*
@@ -27,8 +27,8 @@ inoremap <s-c-CR> <ESC>o<ESC>0C**  :notes:<ESC>Bhi
 nmap <LocalLeader>n    o<ESC>0C**  :notes:<ESC>Bhi
 
 " HTML and code sections
-nmap <LocalLeader>h  o<ESC>0C#+BEGIN_HTML<ESC>o#+END_HTML<ESC>O
-nmap <LocalLeader>c  o<ESC>0C#+begin_src python<ESC>o#+end_src<ESC>O
+nmap <LocalLeader>h  o<ESC>0C#+BEGIN_HTML<CR><ESC>0C#+END_HTML<ESC>O
+nmap <LocalLeader>c  o<ESC>0C#+begin_src html<CR><ESC>0C#+end_src<ESC>O
 
 """""""""""" Configuration
 let g:org_export_babel_evaluate = 1

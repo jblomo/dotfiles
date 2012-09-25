@@ -1,7 +1,7 @@
 "
 " Python filetype plugin for running flake8
 " Language:     Python (ft=python)
-" Maintainer:   Vincent Driessen <vincent@datafox.nl>
+" Maintainer:   Vincent Driessen <vincent@3rdcloud.com>
 " Version:      Vim 7 (may work with lower Vim versions, but not tested)
 " URL:          http://github.com/nvie/vim-flake8
 "
@@ -11,11 +11,20 @@ if exists("b:loaded_flake8_ftplugin")
 endif
 let b:loaded_flake8_ftplugin=1
 
-let s:flake8_cmd="flake8"
+if exists("g:flake8_cmd")
+    let s:flake8_cmd=g:flake8_cmd
+else
+    let s:flake8_cmd="flake8"
+endif
 
 let s:flake8_ignores=""
 if exists("g:flake8_ignore")
     let s:flake8_ignores=" --ignore=".g:flake8_ignore
+endif
+
+let s:flake8_max_line_length=""
+if exists("g:flake8_max_line_length")
+    let s:flake8_max_line_length=" --max-line-length=".g:flake8_max_line_length
 endif
 
 if !exists("*Flake8()")
@@ -39,7 +48,7 @@ if !exists("*Flake8()")
 
         " perform the grep itself
         let &grepformat="%f:%l:%c: %m\,%f:%l: %m"
-        let &grepprg=s:flake8_cmd.s:flake8_ignores
+        let &grepprg=s:flake8_cmd.s:flake8_ignores.s:flake8_max_line_length
         silent! grep! %
 
         " restore grep settings
@@ -74,6 +83,5 @@ endif
 if !exists("no_plugin_maps") && !exists("no_flake8_maps")
     if !hasmapto('Flake8(')
         noremap <buffer> <F7> :call Flake8()<CR>
-        noremap! <buffer> <F7> :call Flake8()<CR>
     endif
 endif
