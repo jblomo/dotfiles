@@ -6,73 +6,51 @@ color_unfocus		= rgb:88/88/88
 modkey = Mod4
 
 # bar settings
-bar_enabled		= 1
-bar_border[1]		= rgb:00/80/80
-bar_color[1]		= black
-bar_font_color[1]	= rgb:a0/a0/a0
-bar_font		= -*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*
-bar_action		= .local/bin/baraction.sh
-#bar_delay		= 1
-#bar_at_bottom		= 1
-stack_enabled		= 1
-clock_enabled		= 1
-clock_format		= %r %F
-title_name_enabled	= 0
-title_class_enabled	= 0
-#focus_mode		= default
-#disable_border		= 1
+bar_enabled         = 1
+bar_border[1]       = rgb:00/80/80
+bar_color[1]        = black
+bar_font_color[1]   = rgb:a0/a0/a0
+bar_font            = -*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*
+bar_action          = .local/bin/baraction.sh
+#bar_delay          = 1
+#bar_at_bottom      = 1
+stack_enabled       = 1
+clock_enabled       = 1
+clock_format        = %r %F
+title_name_enabled  = 0
+title_class_enabled = 0
+#focus_mode         = default
+#disable_border     = 1
 
 # spawn app
-# program[term]		= x-terminal-emulator
-# program[screenshot_all]	= screenshot.sh full
-# program[screenshot_wind]	= screenshot.sh window
-program[lock]		= gnome-screensaver-command -l
-program[onescreen]	= /home/jblomo/local/bin/1screens.sh
-program[twoscreen]	= /home/jblomo/local/bin/2screens.sh
-# program[initscr]	= initscreen.sh
-# program[menu]		= dmenu_run -fn $bar_font -nb $bar_color -nf $bar_font_color -sb $bar_border -sf $bar_color
-spawn_term		= x-terminal-emulator
+# program[term]            = x-terminal-emulator
+# program[screenshot_all]  = screenshot.sh full
+# program[screenshot_wind] = screenshot.sh window
+program[lock]              = xscreensaver-command -l
+program[onescreen]         = /home/jblomo/local/bin/1screen-xrandr.sh
+program[twoscreen]         = /home/jblomo/local/bin/2screen-xrandr.sh
+# program[initscr]         = initscreen.sh
+# program[menu]            = dmenu_run -fn $bar_font -nb $bar_color -nf $bar_font_color -sb $bar_border -sf $bar_color
+spawn_term                 = x-terminal-emulator
 
 # dialog box size ratio .3 >= r < 1
-dialog_ratio		= 0.6
-
-# Split a non-Xrandr dual head setup into one region per monitor
-# (non-standard driver-based multihead is not seen by scrotwm)
-#region		= screen[1]:1920x1200+0+0
-#region		= screen[1]:1680x1050+1920+0
+dialog_ratio = 0.6
 
 # key bindings
-bind[lock]		= MOD+F12
-bind[onescreen]		= MOD+F6
-bind[twoscreen]		= MOD+F7
+bind[lock]        = MOD+F12
+bind[onescreen]   = MOD+F6
+bind[twoscreen]   = MOD+F7
+bind[screen_next] = MOD+o
 #XF86Audio Controls
-program[mocp_toggle]    = mocp -G
-bind[mocp_toggle]       = XF86AudioPlay
-program[mocp_prev]      = mocp -r
-bind[mocp_prev]         = XF86AudioPrev
-program[mocp_next]      = mocp -f
-bind[mocp_next]         = XF86AudioNext
-program[mute_volume]    = amixer -q sset Master toggle
-bind[mute_volume]       = XF86AudioMute
-program[raise_volume]   = amixer -q sset Master 3%+ unmute
-bind[raise_volume]      = XF86AudioRaiseVolume
-program[lower_volume]   = amixer -q sset Master 3%- unmute
-bind[lower_volume]      = XF86AudioLowerVolume
-
-# quirks
-# remove with: quirk[class:name] = NONE
-#quirk[MPlayer:xv]			= FLOAT + FULLSCREEN
-#quirk[OpenOffice.org 2.4:VCLSalFrame]	= FLOAT
-#quirk[OpenOffice.org 3.0:VCLSalFrame]	= FLOAT
-#quirk[OpenOffice.org 3.1:VCLSalFrame]	= FLOAT
-#quirk[Firefox-bin:firefox-bin]		= TRANSSZ
-quirk[Firefox:Dialog]			= FLOAT
-#quirk[Gimp:gimp]			= FLOAT + ANYWHERE
-quirk[Gnome-panel:gnome-panel]		= FLOAT + ANYWHERE
-#quirk[XTerm:xterm]			= XTERM_FONTADJ
-#quirk[xine:Xine Window]			= FLOAT + ANYWHERE
-#quirk[Xitk:Xitk Combo]			= FLOAT + ANYWHERE
-#quirk[xine:xine Panel]			= FLOAT + ANYWHERE
-#quirk[Xitk:Xine Window]			= FLOAT + ANYWHERE
-#quirk[xine:xine Video Fullscreen Window] = FULLSCREEN + FLOAT
-#quirk[pcb:pcb]				= FLOAT
+program[mocp_toggle]  = mocp -G
+bind[mocp_toggle]     = XF86AudioPlay
+program[mocp_prev]    = mocp -r
+bind[mocp_prev]       = XF86AudioPrev
+program[mocp_next]    = mocp -f
+bind[mocp_next]       = XF86AudioNext
+program[mute_volume]  = amixer -q sset Master toggle
+bind[mute_volume]     = XF86AudioMute
+program[raise_volume] = amixer -q sset Master 3%+ unmute
+bind[raise_volume]    = XF86AudioRaiseVolume
+program[lower_volume] = amixer -q sset Master 3%- unmute
+bind[lower_volume]    = XF86AudioLowerVolume
