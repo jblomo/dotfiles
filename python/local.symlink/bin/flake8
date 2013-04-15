@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/usr/bin/env python
 # EASY-INSTALL-SCRIPT: 'flake8==1.3','flake8'
 __requires__ = 'flake8==1.3'
 import pkg_resources
