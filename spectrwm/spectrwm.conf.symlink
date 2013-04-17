@@ -21,13 +21,13 @@ title_class_enabled = 0
 
 # spawn app
 # program[term]            = x-terminal-emulator
-program[screenshot_all]  = scrot Pictures/scrot-ss.png
-program[screenshot_wind] = scrot -s Pictures/scrot.png
+# program[screenshot_all]  = screenshot.sh full
+# program[screenshot_wind] = screenshot.sh window
 program[lock]              = xscreensaver-command -l
 program[onescreen]         = /home/jblomo/local/bin/1screen-xrandr.sh
 program[twoscreen]         = /home/jblomo/local/bin/2screen-xrandr.sh
 # program[initscr]         = initscreen.sh
-# program[menu]            = dmenu_run -fn $bar_font -nb $bar_color -nf $bar_font_color -sb $bar_border -sf $bar_color
+program[menu]              = kupfer
 spawn_term                 = x-terminal-emulator
 
 # dialog box size ratio .3 >= r < 1
@@ -40,6 +40,7 @@ bind[twoscreen]   = MOD+F7
 bind[screen_next] = MOD+o
 
 autorun = ws[1]:xfce4-power-manager
+autorun = ws[1]:kupfer --no-splash
 
 #XF86Audio Controls
 program[mocp_toggle]  = mocp -G
