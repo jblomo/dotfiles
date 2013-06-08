@@ -10,4 +10,4 @@ times_in_seconds
 if_up_strictness link
 
 TEXT
-CPU:$cpu%     IO:$diskio     RAM:$memperc%     Freq:${freq 0} ${freq 1} ${freq 2} ${freq 3}     ${if_up wlan0}WiFi:${wireless_essid wlan0} ${wireless_link_qual_perc wlan0}% ${upspeed wlan0}/${downspeed wlan0} $endif ${if_up eth0}Eth:${upspeed eth0}/${downspeed eth0} $endif    ${battery_short BAT0} ${if_empty ${battery_time BAT0}}⚡$else${format_time ${battery_time BAT0} "\h:\m:\s"}$endif     ${time %r %F}
+CPU:$cpu%     IO:$diskio     RAM:$memperc%     Freq:${freq 0} ${freq 1} ${freq 2} ${freq 3}     ${if_up wlan0}WiFi:${wireless_essid wlan0} ${wireless_link_qual_perc wlan0}% ${upspeed wlan0}/${downspeed wlan0} $endif ${if_up eth0}Eth:${upspeed eth0}/${downspeed eth0} $endif    ${battery_short BAT1} ${if_empty ${battery_time BAT1}}⚡$else${format_time ${battery_time BAT1} "\h:\m:\s"}$endif     ${time %r %F}
