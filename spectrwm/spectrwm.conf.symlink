@@ -21,8 +21,8 @@ title_class_enabled = 0
 
 # spawn app
 # program[term]            = x-terminal-emulator
-program[screenshot_all]  = scrot Pictures/scrot-ss.png
-program[screenshot_wind] = scrot -s Pictures/scrot.png
+# program[screenshot_all]  = screenshot.sh full
+# program[screenshot_wind] = screenshot.sh window
 program[lock]              = xscreensaver-command -l
 program[onescreen]         = /home/jblomo/local/bin/1screen-xrandr.sh
 program[twoscreen]         = /home/jblomo/local/bin/2screen-xrandr.sh
