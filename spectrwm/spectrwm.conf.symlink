@@ -27,7 +27,7 @@ program[lock]              = xscreensaver-command -l
 program[onescreen]         = /home/jblomo/local/bin/1screen-xrandr.sh
 program[twoscreen]         = /home/jblomo/local/bin/2screen-xrandr.sh
 # program[initscr]         = initscreen.sh
-program[menu]              = kupfer
+# program[menu]            = dmenu_run -fn $bar_font -nb $bar_color -nf $bar_font_color -sb $bar_border -sf $bar_color
 spawn_term                 = x-terminal-emulator
 
 # dialog box size ratio .3 >= r < 1
@@ -40,7 +40,6 @@ bind[twoscreen]   = MOD+F7
 bind[screen_next] = MOD+o
 
 autorun = ws[1]:xfce4-power-manager
-autorun = ws[1]:kupfer --no-splash
 
 #XF86Audio Controls
 program[mocp_toggle]  = mocp -G
