@@ -1,6 +1,8 @@
 # Conky, a system monitor, based on torsmo
 
 out_to_stderr no
+out_to_x no
+out_to_console yes
 background no
 no_buffers yes
 update_interval 10.0
