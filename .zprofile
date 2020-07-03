@@ -3,6 +3,7 @@ if [ -f /etc/profile ]; then
 fi
 export PATH=$PATH:~/.local/bin:~/local/bin
 export EDITOR='vim'
+bindkey -e
 export CLICOLOR=true
 
 
