@@ -58,10 +58,13 @@ set noshowcmd              " don't display incomplete commands
 set nostartofline          " don't jump to the start of line when scrolling
 set previewheight=17
 set report=0               " tell us about changes
-set statusline=%f\ %{fugitive#statusline()}%=%40(%{Tlist_Get_Tagname_By_Line()}%)\ %h%m%r%=%-10.(%l,%c%V%)\ %P
 set ruler                  " show the cursor position all the time
 set scrolloff=2
 set shortmess=filtIoOA     " shorten messages
+set splitbelow                  " Split horizontal windows below to the current windows
+set splitright                  " Split vertical windows right to the current windows
+set statusline=%f\ %{fugitive#statusline()}%=%40(%{Tlist_Get_Tagname_By_Line()}%)\ %h%m%r%=%-10.(%l,%c%V%)\ %P
+set wildignore+=*.dll,*.o,*.pyc,*.bak,*.exe,*.jpg,*.jpeg,*.png,*.gif,*$py.class,*.class,*/*.dSYM/*,*.dylib,*.so,*.swp,*.zip,*.tgz,*.gz
 set wildmenu               " turn on wild menu
 set wildmode=list:longest,full
 
