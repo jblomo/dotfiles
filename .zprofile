@@ -35,6 +35,13 @@ autoload colors
 colors
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
+autoload -Uz compinit
+if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
+	compinit;
+else
+	compinit -C;
+fi;
+
 plugin_src=~/.config/zsh/plugins.txt
 plugin_sh=~/.config/zsh/plugins.sh
 if [[ ! $plugin_sh -nt $plugin_src ]]; then
@@ -42,13 +49,6 @@ if [[ ! $plugin_sh -nt $plugin_src ]]; then
 fi
 source $plugin_sh
 unset plugin_src plugin_sh
-
-autoload -Uz compinit
-if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
-	compinit;
-else
-	compinit -C;
-fi;
 
 # https://www.atlassian.com/git/tutorials/dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
