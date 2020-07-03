@@ -2,5 +2,5 @@
 	path = .vim/pack/plugins/start/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
 [submodule ".vim/pack/colors/Zenburn"]
-	path = .vim/pack/colors/Zenburn
+	path = .vim/pack/colors/start/Zenburn
 	url = https://github.com/jnurmine/Zenburn.git
